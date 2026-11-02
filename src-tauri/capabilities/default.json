@@ -1,0 +1,11 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "StoryOps main window capabilities. All privileged work happens in validated Rust commands; the webview may only use dialogs, the clipboard and safe default APIs.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "opener:default"
+  ]
+}
