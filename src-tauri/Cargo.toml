@@ -8,7 +8,9 @@ rust-version = "1.77"
 
 [lib]
 name = "storyops_lib"
-crate-type = ["staticlib", "cdylib", "rlib"]
+# Windows desktop links the rlib directly. `cdylib` is only needed for mobile
+# targets, and its export table overflows the MinGW linker's ordinal range.
+crate-type = ["staticlib", "rlib"]
 
 [build-dependencies]
 tauri-build = { version = "2", features = [] }
