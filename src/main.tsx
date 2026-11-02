@@ -1,0 +1,1 @@
+﻿-import { createRoot } from 'react-dom/client'; -import { App } from ./components/ui; -import ./styles.css; -createRoot(document.getElementById('root')!).render(-<ReactStrictMode> -<App /> -</ReactStrictMode>,);
